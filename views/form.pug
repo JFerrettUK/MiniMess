@@ -1,0 +1,9 @@
+form(method="POST" action="/new")
+  h1 New Message
+  label(for="author") Username: 
+  input(type="text" id="author" name="author" required)
+  p   
+  label(for="message") Message: 
+  textarea(id="message" name="message" required)
+  p 
+  button(type="submit") Send Message
