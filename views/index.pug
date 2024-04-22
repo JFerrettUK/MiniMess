@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 Message Board
+  p Welcome to my message board.
+  p 
+  each message in messages
+    p #{message.text} - #{message.user} #{message.added}
