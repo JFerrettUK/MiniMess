@@ -24,5 +24,12 @@ router.get("/new", function (req, res, next) {
   res.render("form");
 });
 
+router.post("/new", function (req, res, next) {
+  const message = req.body.message;
+  const author = req.body.author;
+  messages.push({ text: message, user: author, added: new Date() });
+  res.redirect("/");
+});
+
 module.exports = router;
 module.exports.messages = messages;
